@@ -1,9 +1,33 @@
 # BQ-AutoComplete
 BqAutoComplete is an open source library for automcomplate, released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 
-The idea behind Bq-AutoComplete is that this is the only javascript single-select dropdown / autocomplete you should ever need. for 1 to 10,000 items.
+The idea behind Bq-AutoComplete is that this is the only javascript single-select dropdown / autocomplete you should ever need. for 1 to 10,000 or so items.
+
+Demo
+====
 
 Javascript demo at http://www.methodicalmiracles.com/Bq-AutoComplete/index.html
+
+Specs and Compatibility
+=======================
+
+Size: 87K + 704K for example data
+Tested with Chrome, Edge, and Internet Explorer. There is a problem with Firefox.
+does not use any third-party code, besides being adapted from Pixabay.
+It works on Android except that Android intercepts the double-click event. You can work around that by typeing "*" instead though.
+
+Security issues: Fortunately this does not use any jquery or eval. However, it uses innerHtml in bq-auto-complete.min.js in two places.
+The data in here is all public domain; the 2017 Naics are from the U.S. government.
+The button styles are my own; feel free to use them.
+Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
+
+It has no dependencies and does not use any third-party code, besides being adapted from Pixabay.
+https://github.com/Pixabay/JavaScript-autoComplete v.1.0.4 (2016-02-10) is an extremely lightweight and powerful vanilla JavaScript completion suggester.
+I looked at adapting from some other controls instead, but Pixabay seemed to have the best public domain one to me to use as a starting point.
+While Pixabay can only have one autocomplete control per page, I worked around this limitation by copying the control, as shown in the sample app.
+
+Features
+========
 
 It works well well and fast when a query returns only a small number of items for the dropdown, 
 and the same control still works well and with only a 2 1/2 second lag when the query returns up to 10,000 for the dropdown. 
@@ -21,15 +45,6 @@ So for example, say Houston is in Texas, which is in the United States. Searchin
 Searching on "Uni" returns "United States", "Texas", but not every single city in the United states.
 This behavior can be changed to include all parents by uncommenting the code in bqac.js.
 It you want different behavior it should be easy to make your own custom bq-matcher.js file.
-
-BqAutocomplete is adapted from https://github.com/Pixabay/JavaScript-autoComplete v.1.0.4 (2016-02-10) an extremely lightweight and powerful vanilla JavaScript completion suggester.
-I looked at adapting from some other controls instead, but Pixabay seemed to have the best public domain one to me to use as a starting point.
-While Pixabay can only have one control per page, I got around this limitation by copying the control, as shown in this sample app.
-
-Security issues: Fortunately this does not use any jquery or eval. However, it uses innerHtml in bq-auto-complete.min.js in two places.
-It does not use any third-party code, besides being adapted from Pixabay.
-The data in here is all public domain; the 2017 Naics are from the U.S. government.
-The button styles are my own; feel free to use them.
 
 Author: Steven Michael Morrison, Ph.D.
 
