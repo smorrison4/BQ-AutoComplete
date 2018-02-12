@@ -13,13 +13,19 @@ Specs and Compatibility
 
 Size: 87K + 704K for example data
 Tested with Chrome, Edge, and Internet Explorer. There is a problem with Firefox.
-does not use any third-party code, besides being adapted from Pixabay.
-It works on Android except that Android intercepts the double-click event. You can work around that by typeing "*" instead though.
+
+It does not use any third-party code, besides being adapted from Pixabay.
+
+It works on Android except that Android intercepts the double-click event. You can work around that by typing "*" instead though.
+
 It works on IPhone except that the down arrow does not work. You can work around that by typing ":" to get the categories, and "*" to list all.
 
 Security issues: Fortunately this does not use any jquery or eval. However, it uses innerHtml in bq-auto-complete.min.js in two places.
+
 The data in here is all public domain; the 2017 Naics are from the U.S. government.
+
 The button styles are my own; feel free to use them.
+
 Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 
 It has no dependencies and does not use any third-party code, besides being adapted from Pixabay.
