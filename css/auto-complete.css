@@ -16,6 +16,7 @@ body {height: 100%;	min-height: 120px; padding: 5px;background: #ffffff;}
  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1.02em;height:25px !important;border-radius:4px !important;
  margin-left:0px; top:5px;display:inline}
 .bqac-btn {height:22px; width:22px;margin-left:-30px;background-color:transparent; border-color:transparent; color:#000000; background:url('../Images/DownArrow.png')}
+.bqac-btn:focus {outline: none;}
 .bqac-filter-type-btn {height:22px; width:22px;margin-left:0px;background-color:transparent; border-color:transparent; color:#000000; background:url('../Images/filter.png')}
 .accordion { width:145px; height:30px; color:#ffffff; background:url('../Images/RedButton.jpg'); background-size:100%,100%;}
 .rot40 {filter:hue-rotate(40deg)}

@@ -226,24 +226,18 @@ function bq2AutoCompleteCategoryList() {
 }
 function bq2AutoCompleteFullOrCategories() {
 	var elem=document.getElementById(bq2CtrlName);
-	elem.bqItem={ ctrl: 'bq2', selectedItem: '', longName: '', dataChoice: ''};
-	if (bq2LstOffice.length < 41) { elem.value='* ';}
-	else { elem.value=': ';}
-	if (bq2ByAttrib==='Office') { bq2LstToUse=bq2LstOffice;}
-	else if (bq2ByAttrib==='BU') { bq2LstToUse=bq2LstBU;}
-	else { bq2LstToUse=bq2LstRole;}
+	if (bq2LstToUse.length < 41) { elem.bqItem = { ctrl: 'bq2', selectedItem: '* ', longName: '', dataChoice: '' }; }
+	else {elem.bqItem={ctrl:'bq2',selectedItem:': ',longName:'',dataChoice:''};}
+	elem.value=elem.bqItem.selectedItem;
 	elem.focus();
-	triggerEvent(elem, 'keyup');
+	triggerEvent(elem,'keyup');
 }
 function bq2AutoCompleteFullOnly() {
 	var elem=document.getElementById(bq2CtrlName);
-	elem.value='* ';
-	elem.bqItem={ ctrl: 'bq2', selectedItem: '', longName: '', dataChoice: ''};
-	if (bq2ByAttrib==='Office') { bq2LstToUse=bq2LstOffice;}
-	else if (bq2ByAttrib==='BU') { bq2LstToUse=bq2LstBU;}
-	else { bq2LstToUse=bq2LstRole;}
+	elem.bqItem={ctrl:'bq2',selectedItem:'* ',longName:'',dataChoice:''};
+	elem.value=elem.bqItem.selectedItem;
 	elem.focus();
-	triggerEvent(elem, 'keyup');
+	triggerEvent(elem,'keyup');
 }
 function btnMoveRight() {
 }
