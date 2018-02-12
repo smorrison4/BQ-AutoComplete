@@ -1,5 +1,10 @@
 html { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
 body {height: 100%;	min-height: 120px; padding: 5px;background: #ffffff;}
+/* for iPhone */
+.scrolling-container .child-element {
+    position: relative;
+    -webkit-transform: translate3d(0,0,0);
+}
 .auto-complete-table {min-width:100px; max-width:600px; width:900px}
 .margin15px {margin:15px}
 .width145px {width:145px}
