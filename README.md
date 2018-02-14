@@ -12,9 +12,9 @@ Specs and Compatibility
 =======================
 
 Size: 87K + 704K for example data
-Tested with Chrome, Edge, Internet Explorer, and Opera. There is a problem with Firefox.
+Tested with Chrome, Edge, Internet Explorer, Firefox, and Opera,
  
-It works on Android and IPhone except that Android intercepts the double-click event. You can work around that by typing "*" instead though.
+It works fine on Android and IPhone except that they intercept the double-click event. You can work around that by typing "*" instead though.
 
 Security issues: Fortunately this does not use any jquery, eval, CORS, or cookies. However, it uses innerHtml in bq-auto-complete.min.js in two places.
 
