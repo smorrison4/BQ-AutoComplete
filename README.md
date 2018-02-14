@@ -12,24 +12,19 @@ Specs and Compatibility
 =======================
 
 Size: 87K + 704K for example data
-Tested with Chrome, Edge, and Internet Explorer. There is a problem with Firefox.
+Tested with Chrome, Edge, Internet Explorer, and Opera. There is a problem with Firefox.
+ 
+It works on Android and IPhone except that Android intercepts the double-click event. You can work around that by typing "*" instead though.
+
+Security issues: Fortunately this does not use any jquery, eval, CORS, or cookies. However, it uses innerHtml in bq-auto-complete.min.js in two places.
+
+The data in here is all public domain; the 2017 NAICS data is from the U.S. government.
 
 It does not use any third-party code, besides being adapted from Pixabay.
 
-It works on Android except that Android intercepts the double-click event. You can work around that by typing "*" instead though.
-
-It works on IPhone except that the down arrow does not work. You can work around that by typing ":" to get the categories, and "*" to list all.
-
-Security issues: Fortunately this does not use any jquery or eval. However, it uses innerHtml in bq-auto-complete.min.js in two places.
-
-The data in here is all public domain; the 2017 Naics are from the U.S. government.
-
-The button styles are my own; feel free to use them.
-
 Released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 
-It has no dependencies and does not use any third-party code, besides being adapted from Pixabay.
-https://github.com/Pixabay/JavaScript-autoComplete v.1.0.4 (2016-02-10) is an extremely lightweight and powerful vanilla JavaScript completion suggester.
+It has no dependencies and does not use any third-party code, besides being adapted from Pixabay: https://github.com/Pixabay/JavaScript-autoComplete v.1.0.4 (2016-02-10).
 I looked at adapting from some other controls instead, but Pixabay seemed to have the best public domain one to me to use as a starting point.
 While Pixabay can only have one autocomplete control per page, I worked around this limitation by copying the control, as shown in the sample app.
 
