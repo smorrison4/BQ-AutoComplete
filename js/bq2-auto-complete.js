@@ -226,15 +226,15 @@ function bq2AutoCompleteCategoryList() {
 }
 function bq2AutoCompleteFullOrCategories() {
 	var elem=document.getElementById(bq2CtrlName);
-	if (bq2LstToUse.length < 41) { elem.bqItem = { ctrl: 'bq2', selectedItem: '* ', longName: '', dataChoice: '' }; }
-	else {elem.bqItem={ctrl:'bq2',selectedItem:': ',longName:'',dataChoice:''};}
+	if (bq2LstToUse.length < 41) { elem.bqItem = { ctrl: 'bq2', selectedItem: '*', longName: '', dataChoice: '' }; }
+	else {elem.bqItem={ctrl:'bq2',selectedItem:':',longName:'',dataChoice:''};}
 	elem.value=elem.bqItem.selectedItem;
 	elem.focus();
 	triggerEvent(elem,'keyup');
 }
 function bq2AutoCompleteFullOnly() {
 	var elem=document.getElementById(bq2CtrlName);
-	elem.bqItem={ctrl:'bq2',selectedItem:'* ',longName:'',dataChoice:''};
+	elem.bqItem={ctrl:'bq2',selectedItem:'*',longName:'',dataChoice:''};
 	elem.value=elem.bqItem.selectedItem;
 	elem.focus();
 	triggerEvent(elem,'keyup');

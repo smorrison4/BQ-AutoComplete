@@ -19,7 +19,7 @@ function bqMatcher0(term, lst, elem) {
 		}
 		if (s.length > 0) {	return s;}
 		selDataChoice='';
-		term='* ';
+		term='*';
 	}
 	else if (selDataChoice.indexOf('-Lvl')!==-1) {
 		c='';
