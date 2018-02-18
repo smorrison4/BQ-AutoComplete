@@ -164,7 +164,8 @@ function bqMatcher0(term, lst, elem) {
 				}
 				lfc=lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
 				chk=(lst[i][1]+'|'+lst[i][2]).toLowerCase()+c;
-				if (~chk.indexOf(term1) || ~chk.indexOf(term2)) {isPush=true;}
+				isPush = false;
+				if (~chk.indexOf(term1) || ~chk.indexOf(term2)) { isPush = true; }
 				else if (lfc===term1 || lfc===term2) {isPush=true;}
 				if (isPush) {
 					if (lvlIndex!==-1) {

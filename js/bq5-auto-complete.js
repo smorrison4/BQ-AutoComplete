@@ -24,14 +24,14 @@ var bq5CtrlName='bq5-auto-complete';
 	}
 })();
 var bq5Demo=new bqAC({
-	selector: '#bq5-auto-complete',
-	minChars: 2,
+	selector:'#bq5-auto-complete',
+	minChars:2,
 	source: function (term, elem, suggester) {
 		var s=bqMatcher(term, bq5Lst, elem);
 		this.suggesterCopy=suggester;
 		suggester(s);
 	},
-	renderItem: function (item, search) {
+	renderItem:function (item, search) {
 		search=search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
 		var re=new RegExp('('+search+')','gi');
 		try {

@@ -94,8 +94,8 @@ var bq2ByAttrib='Office';
 	else { bq2LstToUSe=bq2LstBU;}
 })();
 var bq2Demo=new bqAC({
-	selector: '#bq2-auto-complete',
-	minChars: 2,
+	selector:'#bq2-auto-complete',
+	minChars:2,
 	source: function (term, elem, suggester) {
 		var s;
 		if (bq2ByAttrib==='Office') {

@@ -24,8 +24,8 @@ var bq4CtrlName='bq4-auto-complete';
 	}
 })();
 var bq4Demo=new bqAC({
-	selector: '#bq4-auto-complete',
-	minChars: 2,
+	selector:'#bq4-auto-complete',
+	minChars:2,
 	source: function (term, elem, suggester) {
 		var s=bqMatcher(term, bq4Lst, elem);
 		this.suggesterCopy=suggester;

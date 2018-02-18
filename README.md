@@ -1,7 +1,10 @@
 # BQ-AutoComplete
 BqAutoComplete is an open source library for automcomplate, released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 
-The idea behind Bq-AutoComplete is that this is the only javascript single-select dropdown / autocomplete you should ever need. for 1 to 10,000 or so items.
+The idea behind Bq-AutoComplete is that this is the only javascript single-select dropdown / autocomplete you should ever need, for 1 to 10,000 items.
+Features at a glance: autocomplete or dropdown by category or all items. Grid in the dropdown, unlimited nesting levels, supports logial operators & | and !.
+Can modify to support left search on some fields and contains search on other fields.
+Fast, easy to populate, and easy to extend the functionality.
 
 Demo
 ====
@@ -14,7 +17,7 @@ Specs and Compatibility
 Size: 87K + 704K for example data
 Tested with Chrome, Edge, Internet Explorer, Firefox, and Opera,
  
-It works fine on Android and IPhone except that they intercept the double-click event. You can work around that by typing "*" instead though.
+It works fine on Android and IPhone except that they intercept the double-click event for listing all. You can work around that by typing "*" instead though.
 
 Security issues: Fortunately this does not use any jquery, eval, CORS, or cookies. However, it uses innerHtml in bq-auto-complete.min.js in two places.
 
@@ -40,7 +43,7 @@ If you have multiple BqAutoCompletes on the same page, they call can use the sam
 However, each one needs its own bq?-auto-complete.js in order for the developer to customize the grid as they wish to meet their needs.
 Should you need a bq7... or higher bqautocomplete, simply copy bq2-auto-complete.js and change every occurrence of 'bq2' to 'bq7'.
 Also, don't forget to change the datasource from 'acc2' to whatever you want it to be.
-On the input lists, just use the symobls as they appear; in other words, use '&', not '&amp;'
+On the input lists, just use the symbols as they appear; in other words, use '&', not '&amp;'
 
 bq-matcher.js currently it does a left search on the first item in the grid, a contains search on the second item in the grid plus any non-displayed keywords plus the first level parent.
 So for example, say Houston is in Texas, which is in the United States. Searching on "Tex" (not case sensitive) returns "Texas", "Houston", and other Texas cities.
