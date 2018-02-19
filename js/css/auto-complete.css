@@ -1,0 +1,42 @@
+html { font-family:"Helvetica Neue", Helvetica, Arial, sans-serif}
+body {height: 100%;	min-height: 120px; padding: 5px;background: #ffffff;}
+/* for iPhone */
+.scrolling-container .child-element {
+    position: relative;
+    -webkit-transform: translate3d(0,0,0);
+}
+.auto-complete-table {min-width:100px; max-width:600px; width:900px}
+.margin15px {margin:15px}
+.width145px {width:145px}
+.topdiv {margin:-15px;margin-top:-30px!important;background: linear-gradient(0deg, #fefefe, white);background-repeat:no-repeat}
+.ac-sugs {text-align:left; cursor:default; border:1px solid #ccc; border-top:0; background:#fff; box-shadow:-1px 1px 3px rgba(0,0,0,.1);
+	position:absolute; display:none; z-index:9999; max-height:550px; overflow:hidden; overflow-y:auto; box-sizing:border-box}
+.ac-sug { position:relative; padding:0 .6em; line-height:23px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:1.02em; color:#333;}
+.ac-sug b { font-weight:normal; color:#1f8dd6; font-size:15px}
+.ac-sug.selected { background:#f0f0f0;}
+.bqauto-input { width:80%;max-width:470px;min-Width:50px;padding-left:30px;font-size:15px;outline:0;color:black;background:white;
+ font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1.02em;height:25px !important;border-radius:4px !important;
+ margin-left:0px; top:5px;display:inline}
+.bqauto-input-shorter { width:79%;max-width:443px;min-Width:43px;padding-left:30px;font-size:15px;outline:0;color:black;background:white;
+ font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1.02em;height:25px !important;border-radius:4px !important;
+ margin-left:0px; top:5px;display:inline}
+.bqac1-btn {height:22px; width:22px;vertical-align:middle; margin-left:-5px;margin-top:-25px;border-color:transparent; border-width:0;color:#000000; background:url('../Images/down-arrow.png')}
+/*.bqac1-btn {height:22px; width:22px;vertical-align:middle; height:15px; margin-left:-5px;margin-top:-25px;border-color:transparent; border-width:0;color:#000000; background:url('../Images/downarrow1.png')}*/
+.bqac2-btn {height:22px; width:22px;vertical-align:middle; height:15px; margin-left:-27px;margin-top:5px;border-color:transparent; border-width:0;color:#000000; background:url('../Images/downarrow2.png')}
+.bqac-btn {height:22px; width:22px;vertical-align:middle; margin-left:-5px;margin-top:-25px;border-color:transparent; border-width:0;color:#000000; background:url('../Images/down-arrow.png')}
+/*.bqac-btn {height:22px; width:22px;margin-left:-30px;vertical-align:middle;background-color:transparent; border-color:transparent; color:#000000; z-index:3;background:url('../Images/DownArrow.png')}*/
+.bqac-btn:focus {outline: none;}
+.bqac1-btn:focus {outline: none;}
+.bqac2-btn:focus {outline: none;}
+.bqac-filter-type-btn {height:22px; width:22px;margin-left:0px;background-color:transparent; border-color:transparent; color:#000000; background:url('../Images/filter.png')}
+.accordion { width:145px; height:30px; color:#ffffff; background:url('../Images/RedButton.jpg'); background-size:100%,100%;}
+.rot40 {filter:hue-rotate(40deg)}
+.rot80 {filter:hue-rotate(80deg)}
+.rot120 {filter:hue-rotate(120deg)}
+.rot160 {filter:hue-rotate(160deg)}
+.rot200 {filter:hue-rotate(200deg)}
+.rot240 {filter:hue-rotate(240deg)}
+.rot300 {filter:hue-rotate(300deg)}
+
+
+

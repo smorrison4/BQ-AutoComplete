@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<link rel="stylesheet" href="css/auto-complete.css">
+<link rel="shortcut icon" href="favicon.ico">
+<title>Autocomplete POC"</title>
+</head>
+<body onload="onloadbody()">
+<div class="topdiv">
+<div class="margin15px">
+<font face="Arial" color="#ffffff">
+<table class="auto-complete-table"><tr><td align="center"><font face="Arial" color="#ffffff"><b>Auto-Complete</b></font></td><td align="center"></td></tr></table>
+</font>
+<input id="bqac1-auto-complete" type="text" autofocus placeholder="Start typing the name or *. (You can also use &amp;, |, !)" class="bqauto-input"/>
+<button id="bqac1-auto-complete-btn" class="bqac1-btn" onclick="bqac1AutoCompleteFullOrCategories()" ondblclick="bqac1AutoCompleteFullOnly()"></button>
+<!--<button id="bqac1-auto-complete2-btn" class="bqac2-btn" onclick="bqac1AutoCompleteFullOnly()" ondblclick="bqac1AutoCompleteFullOnly()"></button>-->
+<br><br>
+<button id="bqac2-auto-complete-filter-btn" class="bqac-filter-type-btn" onclick="bqac2AutoCompleteCategoryList()" ondblclick="bqac2AutoCompleteFullOnly()"></button>
+<input id="bqac2-auto-complete" type="text" autofocus placeholder="Start typing the name or *. (You can also use &amp;, |, !)" class="bqauto-input-shorter" />
+<button id="bqac2-auto-complete-btn" class="bqac1-btn" onclick="bqac2AutoCompleteFullOrCategories()" ondblclick="bqac2AutoCompleteFullOnly()"></button>
+<!--<button id="bqac2-auto-complete2-btn" class="bqac2-btn" onclick="bqac2AutoCompleteFullOnly()" ondblclick="bqac2AutoCompleteFullOnly()"></button>-->
+<br><br>
+<input id="bqac3-auto-complete" type="text" autofocus placeholder="Start typing the name or *. (You can also use &amp;, |, !)" class="bqauto-input"/>
+<button id="bqac3-auto-complete-btn" class="bqac1-btn" onclick="bqac3AutoCompleteFullOrCategories()" ondblclick="bqac3AutoCompleteFullOnly()"></button>
+<!--<button id="bqac3-auto-complete-btn2" class="bqac2-btn" onclick="bqac3AutoCompleteFullOnly()" ondblclick="bqac3AutoCompleteFullOnly()"></button>-->
+<br><br>
+<input id="bqac4-auto-complete" type="text" autofocus placeholder="Start typing the name or *. (You can also use &amp;, |, !)" class="bqauto-input"/>
+<button id="bqac4-auto-complete-btn" class="bqac1-btn" onclick="bqac4AutoCompleteFullOrCategories()" ondblclick="bqac4AutoCompleteFullOnly()"></button>
+<!--<button id="bqac4-auto-complete2-btn" class="bqac2-btn" onclick="bqac4AutoCompleteFullOnly()" ondblclick="bqac4AutoCompleteFullOnly()"></button>-->
+<br><br>
+<input id="bqac5-auto-complete" type="text" autofocus placeholder="Start typing the name or *. (You can also use &amp;, |, !)" class="bqauto-input"/>
+<button id="bqac5-auto-complete-btn" class="bqac1-btn" onclick="bqac5AutoCompleteFullOrCategories()" ondblclick="bqac5AutoCompleteFullOnly()"></button>
+<!--<button id="bqac5-auto-complete2-btn" class="bqac2-btn" onclick="bqac5AutoCompleteFullOnly()" ondblclick="bqac5AutoCompleteFullOnly()"></button>-->
+<br><br>
+<input id="bqac6-auto-complete" type="text" autofocus placeholder="Type the color in various languages or *. (You can also use &amp;, |, !)" class="bqauto-input"/>
+<button id="bqac6-auto-complete-btn" class="bqac1-btn" onclick="bqac6AutoCompleteFullOrCategories()" ondblclick="bqac6AutoCompleteFullOnly()"></button>
+<!--<button id="bqac6-auto-complete2-btn" class="bqac2-btn" onclick="bqac6AutoCompleteFullOnly()" ondblclick="bqac6AutoCompleteFullOnly()"></button>-->
+<br><br><br>
+
+<table  border="0" class="width145px" cellspacing="1" colspan="2" bordercolor="#000000" cellpadding="1">
+<tr><td align="center">&nbsp;</td>
+</table>
+<button type="button" id="Button1" class="accordion rot240" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 1</button>
+<br><br>
+<button type="button" id="Button2" class="accordion rot200" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 2</button>
+<br><br>
+<button type="button" id="Button3" class="accordion rot160" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 3</button>
+<br><br>
+<button type="button" id="Button4" class="accordion rot120" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 4</button>
+<br><br>
+<button type="button" id="Button5" class="accordion rot80" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 5</button>
+<br><br>
+<button type="button" id="Button6" class="accordion rot40" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 6</button>
+<br><br>
+<button type="button" id="Button7" class="accordion" onclick="accordionClick('Answer7')">&nbsp;&nbsp;&nbsp;Button 7</button>
+<br><br>
+<button type="button" id="Button8" class="accordion rot300" onclick="accordionClick('Answer')">&nbsp;&nbsp;&nbsp;Button 8</button>
+<br><br>
+</div></div>
+<!-- HTML5 shim and Response.js for IE8 support --><!--[if lt IE 9]><script scr="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>	<script scr="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]--><!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="js/leftnav.js"></script>
+<script src="js/bq-matcher.js"></script><script src="js/bq-matcher0.js"></script><script src="js/bq-auto-complete.min.js"></script>
+<script src="js/data-account.js"></script><script src="js/data-city.js"></script><script src="js/data-color.js"></script>
+<script src="js/data-naic.js"></script><script src="js/data-staff.js"></script>
+<script src="js/bqac1-auto-complete.js"></script><script src="js/bqac2-auto-complete.js"></script><script src="js/bqac3-auto-complete.js"></script>
+<script src="js/bqac4-auto-complete.js"></script><script src="js/bqac5-auto-complete.js"></script><script src="js/bqac6-auto-complete.js"></script>
+</body></html>
+
