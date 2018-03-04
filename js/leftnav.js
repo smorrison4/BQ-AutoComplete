@@ -59,6 +59,18 @@ function accordionClick(idValue) {
 	}
 }
 function accordionClick(e) {
-	alert('button clicked ' + e);
+	if (e === 'Button1') {
+		setbqac1ByIndex(4);
+	}
+	else if (e === 'Button2') {
+		var item = ["1901", "1st VACATION REIMBURSEMENT", ""];
+		setbqac1ByItem(item);
+	}
+	else if (e === 'Button3') {
+		setbqac1ByKey('1901620');
+	}
+	else {
+		alert('button clicked ' + e);
+	}
 }
 var acc4 = [['Highlander', 'There can be only one', '']];

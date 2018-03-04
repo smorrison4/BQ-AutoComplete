@@ -10,6 +10,7 @@ Demo
 ====
 
 Javascript demo at http://www.methodicalmiracles.com/Bq-AutoComplete/index.html
+This is also compatible with Angular JS. Demo at http://www.methodicalmiracles.com/Bq-AutoComplete-AngJS/listbox.html
 
 Specs and Compatibility
 =======================
@@ -40,8 +41,8 @@ When there are thousands of items, often a user will want to orgnaize them in a 
 It turns into a readonly control when there is only one item for the dropdown.
 
 If you have multiple BqAutoCompletes on the same page, they call can use the same bq-matcher.js and bq-auto-complete.min.js files.
-However, each one needs its own bq?-auto-complete.js in order for the developer to customize the grid as they wish to meet their needs.
-Should you need a bq7... or higher bqautocomplete, simply copy bq2-auto-complete.js and change every occurrence of 'bq2' to 'bq7'.
+However, each one needs its own bqac?-auto-complete.js in order for the developer to customize the grid as they wish to meet their needs.
+Should you need a bqac7... or higher bqautocomplete, simply copy bqac2-auto-complete.js and change every occurrence of 'bqac2' to 'bqac7'.
 Also, don't forget to change the datasource from 'acc2' to whatever you want it to be.
 On the input lists, just use the symbols as they appear; in other words, use '&', not '&amp;'
 
