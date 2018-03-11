@@ -1,4 +1,7 @@
-﻿var pageToLoad = "";
+﻿// TODO: When edit Autocomplete, set binding back to ainput and label
+// TODO: Long term: D3 Graphs, Panes, Tables, Security, S Corp, CCorp, 
+
+var pageToLoad = "";
 var browserType = "unknown";
 // Check the Netscape or IE version
 // Netscape 4, 5, 6. IE 3, 4, 5, 6
@@ -58,16 +61,114 @@ function accordionClick(idValue) {
 		acc1.nextElementSibling.classList.add('show');
 	}
 }
+function oninputkeyup0(nbr) {
+	var elem = null;
+	var labelElem = null;
+	if (nbr === '1') {
+		labelElem = document.getElementById('label1');
+		elem = document.getElementById('input1');
+		setbqac1ByEntry(elem.value);
+		labelElem.textContent = elem.value;
+	}
+	else if (nbr === '2') {
+		labelElem = document.getElementById('label2');
+		elem = document.getElementById('input2');
+		setbqac2ByEntry(elem.value);
+		labelElem.textContent = elem.value;
+	}
+	else if (nbr === '3') {
+		labelElem = document.getElementById('label3');
+		elem = document.getElementById('input3');
+		setbqac3ByEntry(elem.value);
+		labelElem.textContent = elem.value;
+	}
+	else if (nbr === '4') {
+		labelElem = document.getElementById('label4');
+		elem = document.getElementById('input4');
+		setbqac4ByEntry(elem.value);
+		labelElem.textContent = elem.value;
+	}
+	else if (nbr === '5') {
+		labelElem = document.getElementById('label5');
+		elem = document.getElementById('input5');
+		setbqac5ByEntry(elem.value);
+		labelElem.textContent = elem.value;
+	}
+	else if (nbr === '6') {
+		labelElem = document.getElementById('label6');
+		elem = document.getElementById('input6');
+		setbqac6ByEntry(elem.value);
+		labelElem.textContent = elem.value;
+	}
+}
+
 function accordionClick(e) {
+	var labelElem = null;
+	var inputElem = null;
+	var acElem = null;
+	if (e === '1') {
+		setbqac1ByIndex(2);
+		inputElem = document.getElementById('input1');
+		labelElem = document.getElementById('label1');
+		acElem = document.getElementById('bqac1-auto-complete');
+		labelElem.textContent = acElem.value;
+		inputElem.value = acElem.value;
+		return;
+	}
+	if (e === '2') {
+		setbqac2ByIndex(2);
+		inputElem = document.getElementById('input2');
+		labelElem = document.getElementById('label2');
+		acElem = document.getElementById('bqac2-auto-complete');
+		labelElem.textContent = acElem.value;
+		inputElem.value = acElem.value;
+		return;
+	}
+	if (e === '3') {
+		setbqac3ByIndex(2);
+		inputElem = document.getElementById('input3');
+		labelElem = document.getElementById('label3');
+		acElem = document.getElementById('bqac3-auto-complete');
+		labelElem.textContent = acElem.value;
+		inputElem.value = acElem.value;
+		return;
+	}
+	if (e === '5') {
+		setbqac5ByIndex(2);
+		inputElem = document.getElementById('input5');
+		labelElem = document.getElementById('label5');
+		acElem = document.getElementById('bqac5-auto-complete');
+		labelElem.textContent = acElem.value;
+		inputElem.value = acElem.value;
+		return;
+	}
+	if (e === '6') {
+		setbqac6ByIndex(2);
+		inputElem = document.getElementById('input6');
+		labelElem = document.getElementById('label6');
+		acElem = document.getElementById('bqac6-auto-complete');
+		labelElem.textContent = acElem.value;
+		inputElem.value = acElem.value;
+		return;
+	}
 	if (e === 'Button1') {
 		setbqac1ByIndex(4);
+		labelElem = document.getElementById('label1');
+		acElem = document.getElementById('bqac1-auto-complete');
+		labelElem.textContent = acElem.value;
 	}
 	else if (e === 'Button2') {
 		var item = ["1901", "1st VACATION REIMBURSEMENT", ""];
 		setbqac1ByItem(item);
+		labelElem = document.getElementById('label2');
+		acElem = document.getElementById('bqac2-auto-complete');
+		labelElem.textContent = acElem.value;
 	}
 	else if (e === 'Button3') {
 		setbqac1ByKey('1901620');
+		labelElem = document.getElementById('label3');
+		acElem = document.getElementById('bqac3-auto-complete');
+		labelElem.textContent = acElem.value;
 	}
 	else {
 		alert('button clicked ' + e);

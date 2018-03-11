@@ -98,9 +98,13 @@ function setbqac6ByItem(item) {
 	var selDataChoice = item[2];
 	var elem = document.getElementById(bqac6CtrlName);
 	elem.bqItem = { ctrl: 'bqac6', selectedItem: selectedItem, longName: selLongName, dataChoice: selDataChoice };
+	if (item[0].indexOf('-Lvl') !== -1 || item[0] === '') {
+		elem.value = item[1];
+		elem.focus();
+		triggerEvent(elem, 'keyup');
+		return elem;
+	}
 	elem.value = item[0] + ' - ' + item[1];
-	elem.focus();
-	triggerEvent(elem, 'keyup');
 }
 function setbqac6ByEntry(entry) {
 	var elem = document.getElementById(bqac6CtrlName);
