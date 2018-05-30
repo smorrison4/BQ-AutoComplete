@@ -1,5 +1,5 @@
 # BQ-AutoComplete
-BqAutoComplete is an open source library for automcomplate, released under the MIT License: http://www.opensource.org/licenses/mit-license.php
+BqAutoComplete is an open source library for autocomplete, released under the MIT License: http://www.opensource.org/licenses/mit-license.php
 
 The idea behind Bq-AutoComplete is that this is the only javascript single-select dropdown / autocomplete you should ever need, for 1 to 10,000 items.
 Features at a glance: autocomplete or dropdown by category or all items. Grid in the dropdown, unlimited nesting levels, supports logial operators & | and !.
