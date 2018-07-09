@@ -22,8 +22,10 @@ function bqMatcher0(term, lst, elem) {
 		term='*';
 	}
 	else if (selDataChoice.indexOf('-Lvl')!==-1) {
-		c='';
-		var curLvl=parseInt(selDataChoice.slice(4, 5));
+		c = '';
+		var backCount = 0
+		var skipCount = 0;
+		var curLvl = parseInt(selDataChoice.slice(4, 5));
 		var upperLvls='';
 		for (var kk=curLvl - 1; kk > 0; kk--) {upperLvls=upperLvls+'-Lvl'+kk;}
 		var lowerLvl='-Lvl'+(curLvl+1);
@@ -42,18 +44,29 @@ function bqMatcher0(term, lst, elem) {
 			}
 			if (c!=='') {
 				if (lst[i][0].indexOf('-Lvl')!==-1) {
-					if (upperLvls.indexOf(lst[i][0])!==-1 ) {
-						return s;
+					if (upperLvls.indexOf(lst[i][0])!==-1 ) {return s;}
+				}
+				if (hasLowerLvl === false || lst[i][0] === lowerLvl) {
+					if (skipCount === 0 && lst[i][0].indexOf('-Lvlback') !== -1) {
+						skipCount++;
+						continue;
+					}
+					if (skipCount === 0) { s.push(lst[i]); }
+					if (lst[i][0].indexOf('-Lvl') !== -1) {
+						skipCount = 0;
+						if (lst[i][0] === lowerLvl) { backCount = 0; }
 					}
 				}
-				if (hasLowerLvl===false || lst[i][0]===lowerLvl) {
-					s.push(lst[i]);
+				else if (lst[i][0].indexOf('-Lvlback') !== -1) {
+					backCount++;
+					continue;
 				}
+				else if (backCount > 0) { s.push(lst[i]); }
 			}
 		}
 		return s;
 	}
-    var isPush=false;
+	var isPush = false;
     if (term.indexOf('*')===-1) {
 		termLen=term.length;
 		var aLvl='-Lvl1';
@@ -119,7 +132,7 @@ function bqMatcher0(term, lst, elem) {
 					lvlIndex=i;
 					continue;
 				}
-				lfc=lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
+				lfc = lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
 				chk=(lst[i][1]+'|'+lst[i][2]).toLowerCase()+c;
 				isPush=false;
 				if (~chk.indexOf(term1) && ~chk.indexOf(term2)) {isPush=true;}
@@ -141,7 +154,7 @@ function bqMatcher0(term, lst, elem) {
 					lvlIndex=i;
 					continue;
 				}
-				lfc=lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
+				lfc = lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
 				chk=(lst[i][1]+'|'+lst[i][2]).toLowerCase()+c;
 				isPush=false;
 				if (~chk.indexOf(term1) && chk.indexOf(term2)===-1 && lfc!==term2) {isPush=true;}
@@ -162,7 +175,7 @@ function bqMatcher0(term, lst, elem) {
 					lvlIndex=i;
 					continue;
 				}
-				lfc=lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
+				lfc = lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
 				chk=(lst[i][1]+'|'+lst[i][2]).toLowerCase()+c;
 				isPush = false;
 				if (~chk.indexOf(term1) || ~chk.indexOf(term2)) { isPush = true; }

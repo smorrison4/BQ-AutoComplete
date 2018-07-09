@@ -52,6 +52,8 @@ Searching on "Uni" returns "United States", "Texas", but not every single city i
 This behavior can be changed to include all parents by uncommenting the code in bqac.js.
 It you want different behavior it should be easy to make your own custom bq-matcher.js file.
 
+See the data-city.js file for an example of how to use -Lvlback to go up a level on the menu
+
 Author: Steven Michael Morrison
 For suggestions contact me at smorrison4@aol.com
 

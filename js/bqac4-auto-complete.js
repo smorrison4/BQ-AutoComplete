@@ -36,14 +36,17 @@ var bqac4Demo=new bqACFcn({
 		var re=new RegExp('('+search+')','gi');
 		try {
 			if (re!==null && item[1]!==null) {
-				if (item[0].indexOf('-Lvl')===-1) {
-					return '<div class="ac-sug" dname="'+item[1]+'" dchoice="'+item[2]+'" dval="'+search+'" dlink="'+item[0]+'">'
+				if (item[0].indexOf('-Lvl') === -1) {
+					return '<div class="ac-sug" dname="' + item[1] + '" dchoice="' + item[2] + '" dval="' + search + '" dlink="' + item[0] + '">'
 						+'<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black">'+item[0]+'</div>'
 						+'<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
 						+'<div style="display:table-cell;background:#ffffff">'+item[1].replace(re,"<b>$1</b>")+'</div></div>';
 				}
 				else {
-					return '<div class="ac-sug" dname="" dchoice="'+item[0]+'" dval="'+item[0]+'"'+search+'" dlink="'+item[1]+'">'
+					if (item[0].indexOf('back') !== -1) {
+						return '';
+					}
+					return '<div class="ac-sug" dname="" dchoice="' + item[0] + '" dval="' + item[0] + '"' + search + '" dlink="' + item[1] + '">'
 						+'<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black"><b>'+item[1]+'</b></div>'
 						+'<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
 						+'<div style="display:table-cell;background:#ffffff">'+'</div></div>';
@@ -67,7 +70,10 @@ var bqac4Demo=new bqACFcn({
 			triggerEvent(elem, 'keyup');
 			return '';
 		}
-		if (selectedItem != '') { selection=selectedItem+" - "+selLongName;}
+		if (selDataChoice.indexOf('-Lvlback') !== -1) {
+			return;
+		}
+		if (selectedItem != '') { selection = selectedItem + " - " + selLongName; }
 		else selection=selLongName;
 		elem.value=selection;
 		//if (selectedItem.indexOf('http' != -1)) {
@@ -104,6 +110,9 @@ function setbqac4ByItem(item) {
 		elem.focus();
 		triggerEvent(elem, 'keyup');
 		return elem;
+	}
+	if (item[0].indexOf('-Lvlback') !== -1) {
+		return;
 	}
 	elem.value = item[0] + ' - ' + item[1];
 }

@@ -38,11 +38,14 @@ var bqac1Demo = new bqACFcn({
 			if (re !== null && item[1] !== null) {
 				if (item[0].indexOf('-Lvl') === -1) {
 					return '<div class="ac-sug" dname="' + item[1] + '" dchoice="' + item[2] + '" dval="' + search + '" dlink="' + item[0] + '">'
-						+ '<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black">' + item[0] + '</div>'
-						+ '<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
-						+ '<div style="display:table-cell;background:#ffffff">' + item[1].replace(re, "<b>$1</b>") + '</div></div>';
+					+ '<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black">' + item[0] + '</div>'
+					+ '<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
+					+ '<div style="display:table-cell;background:#ffffff">' + item[1].replace(re, "<b>$1</b>") + '</div></div>';
 				}
 				else {
+					if (item[0].indexOf('back') !== -1) {
+						return '';
+					}
 					return '<div class="ac-sug" dname="" dchoice="' + item[0] + '" dval="' + item[0] + '"' + search + '" dlink="' + item[1] + '">'
 						+ '<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black"><b>' + item[1] + '</b></div>'
 						+ '<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
@@ -103,6 +106,9 @@ function setbqac1ByItem(item) {
 		elem.focus();
 		triggerEvent(elem, 'keyup');
 		return elem;
+	}
+	if (item[0].indexOf('-Lvlback') !== -1) {
+		return;
 	}
 	elem.value = item[0] + ' - ' + item[1];
 }

@@ -1,6 +1,7 @@
-<!doctype html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+ <!doctype html><html lang="en"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 <link rel="stylesheet" href="css/auto-complete.css">
+<link rel="stylesheet" href="css/bq-listbox.css">
 <link rel="shortcut icon" href="favicon.ico">
 <title>Autocomplete POC"</title>
 </head>
@@ -51,6 +52,57 @@
 <td><button type="button" id="Button21" class="accordion rot40" onclick="accordionClick('6')">&nbsp;&nbsp;&nbsp;Button 6</button></td>
 </tr>
 </table>
+<!--  document.getElementById("Button").disabled = true; -->
+<br><br>
+<table class="width700" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td class="td-med-width">
+                <div class="checkListContainer">
+                    <div class="checkListBox width300">
+                        Available
+                        <div class="bq-below-available">
+                            <div class="bq-second-level">
+                                <div class="bq-around-textbox">
+                                    <input id="input-available" type="text" class="bq-textbox" oninput="bqlistbox.inputAvailableChanged(this.value)" />
+                                </div>
+                            </div>
+                            <div>
+                                <select id="select-available" multiple size="6" class="bq-left-listbox"></select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td class="bq-mid-panel">
+                <div>
+                    <button type="button" id="btn-right-all" class="bq-double-right" onclick="bqlistbox.copyRightAll()"></button>
+                </div>
+                <div>
+                    <button type="button" id="btn-right" class="bq-right" onclick="bqlistbox.copyRight()"></button>
+                </div>
+				<br/>
+                <div>
+                    <button type="button" id="btn-left" class="bq-left" onclick="bqlistbox.copyLeft()"></button>
+                </div>
+                <div>
+                    <button type="button" id="btn-left-all" class="bq-double-left" onclick="bqlistbox.copyLeftAll()"></button>
+                </div>
+            </td>
+            <td class="bq-right-td">
+                <div class="checkListContainer">
+                    <div class="checkListBox width300">
+                        Included
+                        <div>
+                            <select id="select-included" multiple size="6" class="bq-right-listbox"></select>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 <table  border="0" class="width145px" cellspacing="1" colspan="2" bordercolor="#000000" cellpadding="1">
 <tr><td align="center">&nbsp;</td>
 </table>
@@ -71,12 +123,14 @@
 <button type="button" id="Button8" class="accordion rot300" onclick="accordionClick('Button8')">&nbsp;&nbsp;&nbsp;Button 8</button>
 <br><br>
 </div></div>
-<!-- HTML5 shim and Response.js for IE8 support --><!--[if lt IE 9]><script scr="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>	<script scr="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]--><!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- HTML5 shim and Response.js for IE8 support --><!--[if lt IE 9]><script scr="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>	<script scr="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug --><!--<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>-->
 <script src="js/leftnav.js"></script>
 <script src="js/bq-matcher.js"></script><script src="js/bq-matcher0.js"></script><script src="js/bq-auto-complete.min.js"></script>
 <script src="js/data-account.js"></script><script src="js/data-city.js"></script><script src="js/data-color.js"></script>
 <script src="js/data-naic.js"></script><script src="js/data-staff.js"></script>
 <script src="js/bqac1-auto-complete.js"></script><script src="js/bqac2-auto-complete.js"></script><script src="js/bqac3-auto-complete.js"></script>
 <script src="js/bqac4-auto-complete.js"></script><script src="js/bqac5-auto-complete.js"></script><script src="js/bqac6-auto-complete.js"></script>
+<script src="js/listbox.js"></script>
 </body></html>
 
