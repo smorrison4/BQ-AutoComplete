@@ -1,0 +1,17 @@
+﻿ul { padding-left: 15px;}
+.bq-below-available {border-width:4px;border-color:lightgray;border-style:solid; border-width:1px; border-color:lightgray;}
+.bq-second-level {border-width: 4px;border-color: lightgray;border-style: solid;border-width: 1px;margin: 4px;border-color: lightgray;}
+.bq-third-level {background: white;	margin: 3px;display: inline-block;}
+.bq-filter-icon {background:url('../Images/Filter.png');background-size:contain;width:30px;height:30px;}
+.width700 {width:700px}
+.td-med-width {min-width:210px; width:342px;}
+.bq-around-textbox {background-color:white;margin-left:-8px;padding-left:7px;display:inline-block;min-width:332px;border-width:0;}
+.bq-textbox {vertical-align:super;height:30px;border-width:0;min-width:332px;}
+.bq-left-listbox {overflow-y:auto;min-width:160px;height:240px; width:340px; border-width:0;margin-top:10px;border-color:lightgray}
+.bq-right-listbox {overflow-y:auto;min-width:160px;width:300px;min-height:300px;border-color:lightgray}
+.bq-right-td {min-width:160px; width:300px;}
+.bq-mid-panel {min-width:50px; max-width: 50px; padding-left:20px;}
+.bq-double-right {height:30px;width:30px;border-width:0;background:url('../Images/DoubleRight.png');background-size:contain;}
+.bq-right {height:30px;width:30px;border-width:0;background:url('../Images/RightArrow.png');background-size:contain;}
+.bq-left {height:30px;width:30px;border-width:0;background:url('../Images/LeftArrow.png');background-size:contain;}
+.bq-double-left {height:30px;width:30px;border-width:0;background:url('../Images/DoubleLeft.png');background-size:contain;}

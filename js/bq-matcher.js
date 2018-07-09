@@ -90,10 +90,14 @@ function bqMatcher(term, lst, elem) {
 						//	continue;
 						//}
             	}
-            	var cc=lst[i][1].toLowerCase();
-				lfc=lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
+            	var cc = lst[i][1].toLowerCase();
+				// Change for left match
+            	lfc = lst[i][0].toLowerCase(); // lowerFirstCol
+            	//lfc = lst[i][0].toLowerCase().slice(0, termLen); // lowerFirstCol
 				chk=(lst[i][1]+'|'+lst[i][2]).toLowerCase()+c;
-				if (~chk.indexOf(term) || lfc===term) {
+				// Change for left match
+				if (~chk.indexOf(term) || lfc.indexOf(term) !==-1) {
+					//if (~chk.indexOf(term) || lfc === term) {
 					if (cc===term) {
 						aLvl=lst[i][0];
 						selDataChoice=aLvl;

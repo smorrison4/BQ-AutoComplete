@@ -17,6 +17,9 @@ body {height: 100%;	min-height: 120px; padding: 5px;background: #ffffff;}
 .bqauto-input { width:80%;max-width:470px;min-Width:50px;padding-left:30px;font-size:15px;outline:0;color:black;background:white;
  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1.02em;height:25px !important;border-radius:4px !important;
  margin-left:0px; top:5px;display:inline}
+.bqauto-input-wide { width:95%;max-width:670px;min-Width:50px;padding-left:30px;font-size:15px;outline:0;color:black;background:white;
+ font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1.02em;height:25px !important;border-radius:4px !important;
+ margin-left:0px; top:5px;display:inline}
 .bqauto-input-shorter { width:79%;max-width:443px;min-Width:43px;padding-left:30px;font-size:15px;outline:0;color:black;background:white;
  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;font-size:1.02em;height:25px !important;border-radius:4px !important;
  margin-left:0px; top:5px;display:inline}

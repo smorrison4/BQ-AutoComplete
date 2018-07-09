@@ -38,20 +38,20 @@ var bqac3Demo=new bqACFcn({
 			if (re!==null && item[1]!==null) {
 				if (item[0].indexOf('-Lvl') === -1) {
 					return '<div class="ac-sug" dname="'+item[1]+'" dchoice="'+item[2]+'" dval="'+search+'" dlink="'+item[0]+'">'
-						+'<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black">'+item[0]+'</div>'
+						+'<div style="display:table-cell;min-width:290px;max-width:290px;border-width:2px;border-color:black">'+item[0]+'</div>'
 						+'<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
 						+'<div style="display:table-cell;background:#ffffff">'+item[1].replace(re,"<b>$1</b>")+'</div></div>';
 				}
 				else {
 					return '<div class="ac-sug" dname="" dchoice="' + item[0] + '" dval="' + item[0] + '"' + search + '" dlink="' + item[1] + '">'
-						+ '<div style="display:table-cell;min-width:70px;max-width:70px;border-width:2px;border-color:black"><b>' + item[1] + '</b></div>'
+						+ '<div style="display:table-cell;min-width:270px;max-width:270px;border-width:2px;border-color:black"><b>' + item[1] + '</b></div>'
 						+ '<div style="display:table-cell;min-width:15px;max-width:15px"></div>'
 						+ '<div style="display:table-cell;background:#ffffff">' + '</div></div>';
 				}
 			}
 		}
 		catch (e) {
-			return '<div style="width:70;background:#ff2222" class="ac-sug" dname="'+item[1]+'" dchoice="'+item[2]+'" dval="'+search+'" dlink="'+item[0]+'">'+'<div display:inline-block; style="Width:60">'+'<div display:inline-block; style="background:#ffffdd">'+item[0]+'</div>'+item[1]+'</div>'+'<div display:inline-block; style="width:50">'+item[0]+'</div></div>';
+			return '<div style="width:70;background:#ff2222" class="ac-sug" dname="'+item[1]+'" dchoice="'+item[2]+'" dval="'+search+'" dlink="'+item[0]+'">'+'<div display:inline-block; style="Width:60">'+'<div display:inline-block; style="background:#ffffdd">'+item[0]+'</div>'+item[1]+'</div>'+'<div display:inline-block; style="width:290">'+item[0]+'</div></div>';
 		}
 	},
 	onSelect:function (e, term, item) {
